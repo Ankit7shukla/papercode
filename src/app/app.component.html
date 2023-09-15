@@ -1,0 +1,18 @@
+<head>
+  <style>
+      li {
+          list-style: none;
+      }
+  </style>
+</head>
+
+<body>
+  <p>{{ subtitle }}</p>
+
+  <input placeholder="Add task." [(ngModel)]="userInput" />
+  <button (click)="onSubmit()">Add Task</button>
+
+  <ul>
+      <li *ngFor="let item of todolist"> <input type="checkbox"  >{{ item }} </li>
+  </ul>
+</body>
